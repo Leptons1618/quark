@@ -13,7 +13,7 @@ class chatbot(commands.Cog):
     usage = "",
     brief = ""
   )
-  async def hello(self, messg):
+  async def hello(self,ctx, messg):
     if not messg.guild:
       return
     if messg.author.bot:
