@@ -35,9 +35,10 @@ class chatbot(commands.Cog):
       message = await self.client.wait_for('message', timeout = 60, check = check)
     # if message.content.startswith(self.client.user.mention):
       msg = message.content
+      params = {"msg":msg}
       
       url = f'https://api-docs.pgamerx.com/v/docs/reference/free/ai-response/ai'
-      response = requests.get(url).json()
+      response = requests.get(url = url, params = params).json()
       
       await message.reply(response.get('cnt'), mention_author = False)
       
