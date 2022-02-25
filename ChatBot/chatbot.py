@@ -25,7 +25,7 @@ class chatbot(commands.Cog):
     # with open('data.json', 'r') as r:
     #   data = r.read()
 
-    url = f'http://api.brainshop.ai/get?bid=156355&key=dRFxI0xUznPI&uid={messg.author.id}&msg=hello'
+    url = f'https://api-docs.pgamerx.com/v/docs/reference/free/ai-response/ai'
     response = requests.get(url).json()
     
       
@@ -35,7 +35,7 @@ class chatbot(commands.Cog):
     # if message.content.startswith(self.client.user.mention):
       msg = message.content
       
-      url = f'http://api.brainshop.ai/get?bid=156355&key=QEWp1JmoKxGlXsVi&uid={message.author.id}&msg={msg}'
+      url = f'https://api-docs.pgamerx.com/v/docs/reference/free/ai-response/ai'
       response = requests.get(url).json()
       
       await message.reply(response.get('cnt'), mention_author = False)
