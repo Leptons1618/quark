@@ -25,10 +25,9 @@ class chatbot(commands.Cog):
     # with open('data.json', 'r') as r:
     #   data = r.read()
 
-    url = f'http://api.brainshop.ai/get?bid=156355&key=QEWp1JmoKxGlXsVi&uid={messg.author.id}&msg=hello'
-    response = requests.get(url)
-    print(response.text)
-    return 
+    url = f'http://api.brainshop.ai/get?bid=156355&key=dRFxI0xUznPI&uid={messg.author.id}&msg=hello'
+    response = requests.get(url).json()
+    
       
     await messg.reply(response.get('cnt'), mention_author = False)
     while True:
