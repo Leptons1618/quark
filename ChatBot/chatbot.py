@@ -24,9 +24,10 @@ class chatbot(commands.Cog):
 
     # with open('data.json', 'r') as r:
     #   data = r.read()
+    params = {"msg":messg.content}
 
     url = f'https://api-docs.pgamerx.com/v/docs/reference/free/ai-response/ai'
-    response = requests.get(url).json()
+    response = requests.get(url = url, params = params).json()
     
       
     await messg.reply(response.get('cnt'), mention_author = False)
