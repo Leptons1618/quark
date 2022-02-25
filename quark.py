@@ -84,4 +84,4 @@ async def invite(message):
 client.load_extension("Akinator.aki")
 client.load_extension("ChatBot.chatbot")
 
-client.run('Nzk1NjcwNzIzMzQzMjg2MzQz.X_MwGw.ZXsbs2eWNMtngowLT-c_5LvmyeM')
+client.run('Nzk1NjcwNzIzMzQzMjg2MzQz.X_MwGw.Y60HXVU5vdD6smL203RNdpxshOk')
